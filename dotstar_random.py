@@ -31,12 +31,17 @@ def random_color():
 n_dots = len(dots)
 
 dots.auto_write = False
+
+timeout = time.time() + 30
+
 while True:
     dots.fill((0,0,0))
-    for i in range(5):
+    for i in range(10):
         dot = random.randrange(0, n_dots)
         dots[dot] = (random_color(), random_color(), random_color())
     dots.show()
     time.sleep(0.05)
 #    dots[dot] = ((0,0,0))
 #    dots.show()
+    if time.time() > timeout:
+        break

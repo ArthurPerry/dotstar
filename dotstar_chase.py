@@ -31,6 +31,9 @@ def random_color():
 n_dots = len(dots)
 
 dots.auto_write = False
+
+timeout = time.time() + 30
+
 counter = 0
 while True:
     dot = counter%n_dots
@@ -40,5 +43,7 @@ while True:
     #dots[dot] = ((255,0,0))
 
     dots.show()
-    time.sleep(0.05)
+    time.sleep(0.02)
     counter +=1
+    if time.time() > timeout:
+        break

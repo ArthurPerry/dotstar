@@ -104,6 +104,8 @@ PURPLE = (180, 0, 255)
 MAGENTA = (255, 0, 20)
 WHITE = (255, 255, 255)
 
+timeout = time.time() + 60
+
 while True:
     # Change this number to change how long it stays on each solid color.
     color_fill(RED, 0.5)
@@ -130,4 +132,7 @@ while True:
     # Increase this number to slow down the rainbow animation.
     rainbow_cycle(0)
 
-    xmas_dance(0.5)
+    xmas_dance(0.5) 
+    
+    if time.time() > timeout: 
+        break
