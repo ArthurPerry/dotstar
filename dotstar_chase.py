@@ -5,6 +5,7 @@ import time
 import random
 import board
 import adafruit_dotstar as dotstar
+from rainbowio import colorwheel
 
 ## Tree Mapping
 ## trunk 0-29
@@ -39,7 +40,8 @@ while True:
     dot = counter%n_dots
 #    print( dot )
     dots[dot-5] = ((0,0,0))
-    dots[dot] = (random_color(), random_color(), random_color())
+    #dots[dot] = (random_color(), random_color(), random_color())
+    dots[dot] = colorwheel(dot & 255)
     #dots[dot] = ((255,0,0))
 
     dots.show()
