@@ -1,10 +1,10 @@
 #! /bin/bash
 
-if test -f "projects/dotstar-proj/adafruit_dotstar/examples/xmas_show.pid"; then
+if test -f "~/dotstar/xmas_show.pid"; then
     ./dots_off.sh
 fi
 
-cd projects/dotstar-proj/adafruit_dotstar/examples/
+cd ~/dotstar/
 ./xmas_show.sh &
 echo $! > xmas_show.pid
 
