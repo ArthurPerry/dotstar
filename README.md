@@ -11,7 +11,7 @@ dots_off.sh will stop the run_show.sh script and turn of the strip.
 
 
 ## Homebridge Automation
-Use [cmdSwitch2](https://github.com/luisiam/homebridge-cmdswitch2#readme) plugin with the following configuration to turn on / off animation script.
+Use [cmdSwitch2](https://github.com/luisiam/homebridge-cmdswitch2#readme) plugin with the following configuration to turn on / off animation script. Ensure that Homebridge is able to log into the remote system (i.e. use `ssh-copy-id` to copy the public key to the remote system)
 
 ```
 {
