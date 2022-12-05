@@ -16,7 +16,7 @@ tree = {
     "cross2"  : {"start": 320 , "end": 357},
     "cross3"  : {"start": 371 , "end": 400},
     "cross4"  : {"start": 411 , "end": 429},
-    "cross5"  : {"start": 443 , "end": 452},
+    "cross5"  : {"start": 437 , "end": 446},
 }
 
 outline = ("bottom1","bottom2","left","right")
