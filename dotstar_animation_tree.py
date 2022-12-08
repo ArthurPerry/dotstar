@@ -73,6 +73,14 @@ animations = AnimationSequence(
           animation_tree_cross5 
 
      ),
+     AnimationGroup(
+          Rainbow(tree_outline, speed=0.1, period=2),
+          RainbowSparkle(tree_cross1, speed=0.01, num_sparkles=15),
+          RainbowSparkle(tree_cross2, speed=0.01, num_sparkles=15),
+          RainbowSparkle(tree_cross3, speed=0.01, num_sparkles=15),
+          RainbowSparkle(tree_cross4, speed=0.01, num_sparkles=15),
+          RainbowSparkle(tree_cross5, speed=0.01, num_sparkles=15),
+     ),
      advance_interval=6, 
      auto_clear=True
 )
