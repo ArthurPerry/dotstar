@@ -36,7 +36,7 @@ sparkle_pulse = SparklePulse(pixels, speed=0.05, period=3, color=JADE)
 
 animations = AnimationSequence(
                  blink, comet, chase, colorcycle, pulse, rainbow, rainbow_chase, rainbow_comet, rainbow_sparkle, sparkle, sparkle_pulse,
-                 advance_interval=3, auto_clear=True)
+                 advance_interval=6, auto_clear=True)
 
 
 while True:
