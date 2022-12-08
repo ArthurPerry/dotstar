@@ -81,6 +81,7 @@ animations = AnimationSequence(
           RainbowSparkle(tree_cross4, speed=0.01, num_sparkles=15),
           RainbowSparkle(tree_cross5, speed=0.01, num_sparkles=15),
      ),
+     Comet(pixels, speed=0.05, color=AMBER, tail_length=5, bounce=True ),
      advance_interval=6, 
      auto_clear=True
 )
