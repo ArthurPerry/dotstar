@@ -70,7 +70,7 @@ animation_tree_cross5 = Comet(tree_cross5, speed=0.05, color=PURPLE, tail_length
 animations = AnimationSequence(
      AnimationGroup(
           AnimationSequence(animation_tree_bottom1, animation_tree_left, animation_tree_right, animation_tree_bottom2,
-               advance_interval=None, 
+               advance_interval=0, 
                auto_clear=True
           ),
           animation_tree_cross1 ,
