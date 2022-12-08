@@ -42,8 +42,8 @@ outline = PixelMap(pixels, [(30,62),(221,259),(63,141),(142,220)], individual_pi
 inside = PixelMap(pixels, [(262,308),(320,357),(371,400),(411,429),(437,446)], individual_pixels=False)
 
 
-blink = Blink(outline, speed=0.5, color=JADE)
-comet = Comet(inside, speed=0.05, color=PURPLE, tail_length=5, bounce=True)
+#blink = Blink(outline, speed=0.5, color=JADE)
+#comet = Comet(inside, speed=0.05, color=PURPLE, tail_length=5, bounce=True)
 #chase = Chase(inside, speed=0.1, size=3, spacing=6, color=AMBER)
 #colorcycle = ColorCycle(pixels, 0.5, colors=[MAGENTA, ORANGE, TEAL])
 #pulse = Pulse(pixels, speed=0.1, color=AMBER, period=3)
@@ -54,8 +54,32 @@ comet = Comet(inside, speed=0.05, color=PURPLE, tail_length=5, bounce=True)
 #sparkle = Sparkle(pixels, speed=0.05, color=AMBER, num_sparkles=10)
 #sparkle_pulse = SparklePulse(pixels, speed=0.05, period=3, color=JADE)
 
+
+animation_tree_bottom1 = Chase(tree_bottom1, speed=0.5, color=JADE)
+animation_tree_left = Chase(tree_left, speed=0.5, color=JADE)
+animation_tree_right = Chase(tree_right, speed=0.5, color=JADE)
+animation_tree_bottom2 = Chase(tree_bottom2, speed=0.5, color=JADE)
+
+animation_tree_cross1 = Comet(tree_cross1, speed=0.05, color=PURPLE, tail_length=5, bounce=True )
+animation_tree_cross2 = Comet(tree_cross2, speed=0.05, color=PURPLE, tail_length=5, bounce=True )
+animation_tree_cross3 = Comet(tree_cross3, speed=0.05, color=PURPLE, tail_length=5, bounce=True )
+animation_tree_cross4 = Comet(tree_cross4, speed=0.05, color=PURPLE, tail_length=5, bounce=True )
+animation_tree_cross5 = Comet(tree_cross5, speed=0.05, color=PURPLE, tail_length=5, bounce=True )
+
+
 animations = AnimationSequence(
-     AnimationGroup(blink,comet),
+     AnimationGroup(
+          AnimationSequence(animation_tree_bottom1, animation_tree_left, animation_tree_right, animation_tree_bottom2,
+               advance_interval=6, 
+               auto_clear=True
+          ),
+          animation_tree_cross1 ,
+          animation_tree_cross2 ,
+          animation_tree_cross3 ,
+          animation_tree_cross4 ,
+          animation_tree_cross5 
+
+     ),
      advance_interval=6, 
      auto_clear=True
 )
