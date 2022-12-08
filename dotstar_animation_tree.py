@@ -65,6 +65,14 @@ animation_tree_cross5 = Comet(tree_cross5, speed=0.05, color=PURPLE, tail_length
 
 animations = AnimationSequence(
      AnimationGroup(
+          Pulse(tree_outline, speed=0.1, color=JADE, period=3),
+          RainbowSparkle(tree_cross1, speed=0.01, num_sparkles=15),
+          RainbowSparkle(tree_cross2, speed=0.01, num_sparkles=15),
+          RainbowSparkle(tree_cross3, speed=0.01, num_sparkles=15),
+          RainbowSparkle(tree_cross4, speed=0.01, num_sparkles=15),
+          RainbowSparkle(tree_cross5, speed=0.01, num_sparkles=15),
+     ),
+          AnimationGroup(
           animation_tree_outline, 
           animation_tree_cross1 ,
           animation_tree_cross2 ,
@@ -72,14 +80,6 @@ animations = AnimationSequence(
           animation_tree_cross4 ,
           animation_tree_cross5 
 
-     ),
-     AnimationGroup(
-          Pulse(tree_outline, speed=0.1, color=JADE, period=3),
-          RainbowSparkle(tree_cross1, speed=0.01, num_sparkles=15),
-          RainbowSparkle(tree_cross2, speed=0.01, num_sparkles=15),
-          RainbowSparkle(tree_cross3, speed=0.01, num_sparkles=15),
-          RainbowSparkle(tree_cross4, speed=0.01, num_sparkles=15),
-          RainbowSparkle(tree_cross5, speed=0.01, num_sparkles=15),
      ),
      Comet(pixels, speed=0.01, color=AMBER, tail_length=10, bounce=True ),
      advance_interval=6, 
