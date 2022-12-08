@@ -80,7 +80,7 @@ animations = AnimationSequence(
           animation_tree_cross5 
 
      ),
-     advance_interval=6, 
+     advance_interval=None, 
      auto_clear=True
 )
 
