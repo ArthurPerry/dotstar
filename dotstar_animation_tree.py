@@ -74,7 +74,7 @@ animations = AnimationSequence(
 
      ),
      AnimationGroup(
-          Rainbow(tree_outline, speed=0.1, period=2),
+          Pulse(tree_outline, speed=0.1, color=JADE, period=3),
           RainbowSparkle(tree_cross1, speed=0.01, num_sparkles=15),
           RainbowSparkle(tree_cross2, speed=0.01, num_sparkles=15),
           RainbowSparkle(tree_cross3, speed=0.01, num_sparkles=15),
