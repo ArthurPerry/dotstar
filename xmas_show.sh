@@ -9,5 +9,6 @@ do
     python3 dotstar_chase.py
     python3 dotstar_random.py
     python3 dotstar_tree.py
+    python3 dotstar_animation_tree.py
 done
 
