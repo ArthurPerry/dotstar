@@ -38,8 +38,8 @@ tree_cross4 = PixelSubset(pixels, 411 ,  429)
 tree_cross5 = PixelSubset(pixels, 437 ,  446)
 
 
-outline = PixelMap(pixels, [(30,62),(221,259),(63,141),(142,220)], individual_pixels=False)
-inside = PixelMap(pixels, [(262,308),(320,357),(371,400),(411,429),(437,446)], individual_pixels=False)
+tree_outline = PixelSubset(pixels, 0 ,  259)
+tree_inside = PixelMap(pixels, [(262,308),(320,357),(371,400),(411,429),(437,446)], individual_pixels=False)
 
 
 #blink = Blink(outline, speed=0.5, color=JADE)
@@ -55,11 +55,7 @@ inside = PixelMap(pixels, [(262,308),(320,357),(371,400),(411,429),(437,446)], i
 #sparkle_pulse = SparklePulse(pixels, speed=0.05, period=3, color=JADE)
 
 
-animation_tree_bottom1 = Chase(tree_bottom1, speed=0.5, color=JADE)
-animation_tree_left = Chase(tree_left, speed=0.5, color=JADE)
-animation_tree_right = Chase(tree_right, speed=0.5, color=JADE)
-animation_tree_bottom2 = Chase(tree_bottom2, speed=0.5, color=JADE)
-
+animation_tree_outline = Chase(tree_outline, speed=0.5, color=JADE)
 animation_tree_cross1 = Comet(tree_cross1, speed=0.05, color=PURPLE, tail_length=5, bounce=True )
 animation_tree_cross2 = Comet(tree_cross2, speed=0.05, color=PURPLE, tail_length=5, bounce=True )
 animation_tree_cross3 = Comet(tree_cross3, speed=0.05, color=PURPLE, tail_length=5, bounce=True )
@@ -69,10 +65,7 @@ animation_tree_cross5 = Comet(tree_cross5, speed=0.05, color=PURPLE, tail_length
 
 animations = AnimationSequence(
      AnimationGroup(
-          AnimationSequence(animation_tree_bottom1, animation_tree_left, animation_tree_right, animation_tree_bottom2,
-               advance_interval=0.5, 
-               auto_clear=True
-          ),
+          animation_tree_outline, 
           animation_tree_cross1 ,
           animation_tree_cross2 ,
           animation_tree_cross3 ,
