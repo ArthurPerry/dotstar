@@ -55,7 +55,7 @@ tree_inside = PixelMap(pixels, [(262,308),(320,357),(371,400),(411,429),(437,446
 #sparkle_pulse = SparklePulse(pixels, speed=0.05, period=3, color=JADE)
 
 
-animation_tree_outline = Chase(tree_outline, speed=0.5, color=JADE, size=5, spacing=8)
+animation_tree_outline = Chase(tree_outline, speed=0.5, color=JADE, size=8, spacing=5)
 animation_tree_cross1 = Comet(tree_cross1, speed=0.05, color=PURPLE, tail_length=5, bounce=True )
 animation_tree_cross2 = Comet(tree_cross2, speed=0.05, color=PURPLE, tail_length=5, bounce=True )
 animation_tree_cross3 = Comet(tree_cross3, speed=0.05, color=PURPLE, tail_length=5, bounce=True )
