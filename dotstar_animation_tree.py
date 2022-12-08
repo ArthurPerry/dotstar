@@ -64,6 +64,7 @@ animation_tree_cross5 = Comet(tree_cross5, speed=0.05, color=PURPLE, tail_length
 
 
 animations = AnimationSequence(
+     Blink(pixels, speed=0.5, color=JADE),
      AnimationGroup(
           Pulse(tree_outline, speed=0.1, color=JADE, period=3),
           RainbowSparkle(tree_cross1, speed=0.01, num_sparkles=15),
