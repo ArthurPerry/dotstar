@@ -1,3 +1,4 @@
+import time
 import board
 import adafruit_dotstar
 from adafruit_led_animation.animation.solid import Solid
@@ -87,8 +88,11 @@ animations = AnimationSequence(
      auto_clear=True
 )
 
+timeout = time.time() + 48
 
 while True:
-    animations.animate()
+     animations.animate()
+     if time.time() > timeout:
+          break
 
 
