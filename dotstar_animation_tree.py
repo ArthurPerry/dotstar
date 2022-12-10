@@ -84,7 +84,7 @@ animations = AnimationSequence(
 
      ),
      Comet(pixels, speed=0.01, color=AMBER, tail_length=10, bounce=True ),
-     SparklePulse(pixels, speed=0.5, color=JADE),
+     SparklePulse(pixels, speed=0.01, color=JADE),
      AnimationGroup(
           Rainbow(tree_outline, speed=0.1, period=3),
           SparklePulse(tree_cross1, speed=0.05, period=3, color=WHITE),
