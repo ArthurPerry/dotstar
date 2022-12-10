@@ -2,7 +2,7 @@ import time
 import board
 import adafruit_dotstar
 from adafruit_led_animation.animation.solid import Solid
-from adafruit_led_animation.color import RED, PURPLE, AMBER, JADE, MAGENTA, ORANGE, TEAL
+from adafruit_led_animation.color import RED, PURPLE, AMBER, JADE, MAGENTA, ORANGE, TEAL,WHITE,OLD_LACE
 from adafruit_led_animation.animation.blink import Blink
 from adafruit_led_animation.animation.comet import Comet
 from adafruit_led_animation.animation.chase import Chase
@@ -84,6 +84,15 @@ animations = AnimationSequence(
 
      ),
      Comet(pixels, speed=0.01, color=AMBER, tail_length=10, bounce=True ),
+     SparklePulse(pixels, speed=0.5, color=JADE),
+     AnimationGroup(
+          Rainbow(tree_outline, speed=0.1, period=3),
+          SparklePulse(tree_cross1, speed=0.05, period=3, color=WHITE)
+          SparklePulse(tree_cross2, speed=0.05, period=3, color=WHITE)
+          SparklePulse(tree_cross3, speed=0.05, period=3, color=WHITE)
+          SparklePulse(tree_cross4, speed=0.05, period=3, color=WHITE)
+          SparklePulse(tree_cross5, speed=0.05, period=3, color=WHITE)
+     ),
      advance_interval=6, 
      auto_clear=True
 )
