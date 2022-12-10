@@ -97,7 +97,7 @@ animations = AnimationSequence(
      auto_clear=True
 )
 
-timeout = time.time() + 180
+timeout = time.time() + 90
 
 while True:
      animations.animate()
