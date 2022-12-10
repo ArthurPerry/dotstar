@@ -74,7 +74,7 @@ animations = AnimationSequence(
           RainbowSparkle(tree_cross4, speed=0.01, num_sparkles=15),
           RainbowSparkle(tree_cross5, speed=0.01, num_sparkles=15),
      ),
-          AnimationGroup(
+     AnimationGroup(
           animation_tree_outline, 
           animation_tree_cross1 ,
           animation_tree_cross2 ,
@@ -97,7 +97,7 @@ animations = AnimationSequence(
      auto_clear=True
 )
 
-timeout = time.time() + 48
+timeout = time.time() + 360
 
 while True:
      animations.animate()
