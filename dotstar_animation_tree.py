@@ -87,10 +87,10 @@ animations = AnimationSequence(
      SparklePulse(pixels, speed=0.5, color=JADE),
      AnimationGroup(
           Rainbow(tree_outline, speed=0.1, period=3),
-          SparklePulse(tree_cross1, speed=0.05, period=3, color=WHITE)
-          SparklePulse(tree_cross2, speed=0.05, period=3, color=WHITE)
-          SparklePulse(tree_cross3, speed=0.05, period=3, color=WHITE)
-          SparklePulse(tree_cross4, speed=0.05, period=3, color=WHITE)
+          SparklePulse(tree_cross1, speed=0.05, period=3, color=WHITE),
+          SparklePulse(tree_cross2, speed=0.05, period=3, color=WHITE),
+          SparklePulse(tree_cross3, speed=0.05, period=3, color=WHITE),
+          SparklePulse(tree_cross4, speed=0.05, period=3, color=WHITE),
           SparklePulse(tree_cross5, speed=0.05, period=3, color=WHITE)
      ),
      advance_interval=6, 
