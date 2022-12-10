@@ -83,7 +83,7 @@ animations = AnimationSequence(
           animation_tree_cross5 
 
      ),
-     RainbowComet(pixels, speed=0.01, tail_length=10, bounce=True ),
+     RainbowComet(pixels, speed=0.01, tail_length=30, bounce=True ),
      SparklePulse(pixels, speed=0.01, color=JADE),
      AnimationGroup(
           Rainbow(tree_outline, speed=0.1, period=3),
@@ -97,7 +97,7 @@ animations = AnimationSequence(
      auto_clear=True
 )
 
-timeout = time.time() + 360
+timeout = time.time() + 180
 
 while True:
      animations.animate()
