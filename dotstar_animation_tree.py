@@ -83,7 +83,7 @@ animations = AnimationSequence(
           animation_tree_cross5 
 
      ),
-     Comet(pixels, speed=0.01, color=AMBER, tail_length=10, bounce=True ),
+     RainbowComet(pixels, speed=0.01, tail_length=10, bounce=True ),
      SparklePulse(pixels, speed=0.01, color=JADE),
      AnimationGroup(
           Rainbow(tree_outline, speed=0.1, period=3),
@@ -93,7 +93,7 @@ animations = AnimationSequence(
           SparklePulse(tree_cross4, speed=0.05, period=3, color=WHITE),
           SparklePulse(tree_cross5, speed=0.05, period=3, color=WHITE)
      ),
-     advance_interval=6, 
+     advance_interval=15, 
      auto_clear=True
 )
 
