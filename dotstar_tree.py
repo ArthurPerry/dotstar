@@ -95,7 +95,7 @@ for part in outline:
 for part in outline :
     paint(part,COLOR_GREEN)
 
-timeout = time.time() + 3
+timeout = time.time() + 15
 while True:
     for part in inside:
         paint_sparkle(part,COLOR_GREEN) 
