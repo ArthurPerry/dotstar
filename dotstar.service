@@ -1,0 +1,20 @@
+[Unit]
+Description=Dotstar Service
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/home/pi/dotstar/xmas_show.sh > /home/pi/dotstar/xmas_show.log 2>&1
+ExecStopPost=/usr/bin/python3 dotstar_off.py
+WorkingDirectory=/home/pi/dotstar
+
+StandardOutput=inherit
+
+StandardError=inherit
+
+Restart=always
+
+User=pi
+
+[Install]
+WantedBy=multi-user.target
