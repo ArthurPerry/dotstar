@@ -8,6 +8,8 @@ dots_off.sh will stop the run_show.sh script and turn of the strip.
 ## Prerequisites:
 - Install [CircuitPython](https://learn.adafruit.com/circuitpython-on-raspberrypi-linux/installing-circuitpython-on-raspberry-pi)
 - Install [Dotstar Library](https://learn.adafruit.com/adafruit-dotstar-leds/python-circuitpython)
+- Install CircuitPython [LED Animation Library](https://learn.adafruit.com/circuitpython-led-animations) - [API Documentation](https://docs.circuitpython.org/projects/led-animation/en/latest/)
+
 
 ## Service Installation
 The service unit file [dotstar.service](dotstar.service) contains the configuration needed to start and stop the animation using `systemctl`.
