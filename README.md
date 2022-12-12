@@ -9,6 +9,33 @@ dots_off.sh will stop the run_show.sh script and turn of the strip.
 - Install [CircuitPython](https://learn.adafruit.com/circuitpython-on-raspberrypi-linux/installing-circuitpython-on-raspberry-pi)
 - Install [Dotstar Library](https://learn.adafruit.com/adafruit-dotstar-leds/python-circuitpython)
 
+## Service Installation
+The service unit file [dotstar.service](dotstar.service) contains the configuration needed to start and stop the animation using `systemctl`.
+```
+# Copy the file to the service directory: 
+sudo cp dotstar.service /lib/systemd/system/
+
+# Set file permissions: 
+sudo chmod 644 /lib/systemd/system/dotstar.service
+
+# Reload the service daemon: 
+sudo systemctl daemon-reload
+
+# Test service start:
+sudo systemctl start dotstar.service
+
+# Test service stop:
+sudo systemctl stop dotstar.service
+
+# Get service status:
+sudo systemctl status dotstar.service
+
+# Test service is active:
+sudo systemctl is-active dotstar.service
+
+# Enable the service to start on boot 
+sudo systemctl enable dotstar.service
+```
 
 ## Homebridge Automation
 Use [cmdSwitch2](https://github.com/luisiam/homebridge-cmdswitch2#readme) plugin with the following configuration to turn on / off animation script. Ensure that Homebridge is able to log into the remote system (i.e. use `ssh-copy-id` to copy the public key to the remote system)
@@ -21,9 +48,9 @@ Use [cmdSwitch2](https://github.com/luisiam/homebridge-cmdswitch2#readme) plugin
     "switches": [
         {
             "name": "RPi Tree",
-            "on_cmd": "ssh pi@192.168.1.197 /home/pi/dotstar/run_show.sh",
-            "off_cmd": "ssh pi@192.168.1.197 /home/pi/dotstar/dots_off.sh",
-            "state_cmd": "ssh pi@192.168.1.197 test -f /home/pi/dotstar/xmas_show.pid",
+            "on_cmd": "ssh pi@<ip-addr> sudo systemctl start dotstar.service",
+            "off_cmd": "ssh pi@<ip-addr> sudo systemctl stop dotstar.service",
+            "state_cmd": "ssh pi@<ip-addr> systemctl is-active  dotstar.service",
             "polling": true,
             "interval": 6,
             "timeout": 3
